@@ -1,44 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <div class="page-container">
 
-  Sneaker Company
+    <header class="header">
 
-  Fall Limited Edition Sneakers
+      <nav class="header__navbar navbar">
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+        <aside class="navbar__logo">
+          <div class="navbar__logo-container">
+            <img src="./images/logo.svg" alt=" logo" class="navbar__logo-img">
+          </div>
+        </aside>
 
-  $125.00
-  50%
-  $250.00
+        <nav class="navbar__menu">
+          <ul class="navbar__menu-ul">
+            <li class="navbar__menu-li"><a href="" class="navabr__menu-link">Collections</a></li>
+          </ul>
+          <ul class="navbar__menu-ul">
+            <li class="navbar__menu-li"><a href="" class="navabr__menu-link">Men</a></li>
+          </ul>
+          <ul class="navbar__menu-ul">
+            <li class="navbar__menu-li"><a href="" class="navabr__menu-link">Women</a></li>
+          </ul>
+          <ul class="navbar__menu-ul">
+            <li class="navbar__menu-li"><a href="" class="navabr__menu-link">About</a></li>
+          </ul>
+          <ul class="navbar__menu-ul">
+            <li class="navbar__menu-li"><a href="" class="navabr__menu-link">Contact</a></li>
+          </ul>
+        </nav>
 
-  0
-  Add to cart
-  
+        <aside class="navbar__client-panel">
+          <div class="navbar__client-panel-chart">
+            <img src="./images/icon-cart.svg" alt="cart" class="navbar__client-panel-cart-img">
+          </div>
+          <div class="navbar__client-panel-profile">
+            <img src="./images/image-avatar.png" alt="profile" class="navbar__client-panel-profile-img">
+          </div>
+        </aside>
+
+      </nav>
+    </header>
+  </div>
+
+  <main class="main">
+
+    <section class="product">
+
+      <aside class="product__preview">
+        <div class="product__preview-main-img-container">
+          <img src="./images/image-product-1.jpg" alt="product" class="product__preview-main-img">
+        </div>
+        <div class="product__preview-images-container">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="product photo 1" class="product__preview-img">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="product photo 2" class="product__preview-img">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="product photo 3" class="product__preview-img">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="product photo 4 class=" product__preview-img">
+        </div>
+      </aside>
+
+      <aside class="product__chart">
+        <h3 class="product__chart-company-name">Sneaker company</h3>
+        <h2 class="product__chart-title">Fall Limited Edition Sneakers<< /h2>
+            <p class="product__chart-description">These low-profile sneakers are your perfect casual wear companion.
+              Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            <div class="product__chart-price-container">
+              <div class="product__chart price-actual">$125.00</div>
+              <div class="product__chart-price-discount">50%</div>
+              <div class="product__chart-price-previous">$250.00</div>
+            </div>
+            <div class="product__chart-order-container">
+              <div class="product__chart-order-quantity-container">
+                <button class="product__chart-order-plus">
+                  <img src="./images/icon-plus.svg" alt="plus" class="product__chart-order-plus-img">
+                </button>
+                <div class="product__chart-order-quantity">0</div>
+                <button class="product__chart-order-minus">
+                  <img src="./images/icon-minus.svg" alt="minus" class="product__chart-order-minus-img">
+                </button>
+              </div>
+              <div class="product__chart-order-button button">Add to cart</div>
+            </div>
+      </aside>
+
+    </section>
+
+  </main>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
 </body>
+
 </html>
