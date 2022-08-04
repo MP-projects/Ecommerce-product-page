@@ -14,8 +14,7 @@ $breakpoints :(xsmall : 'min-width: 460px',
             @content;
         }
     }
-
-    @else {
+@else {
         @error $breakpoint
     }
 

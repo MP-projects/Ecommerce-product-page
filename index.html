@@ -44,7 +44,7 @@
 
         <nav class="navbar__menu">
           <img src="./images/icon-menu.svg" alt="menu" class="navbar__menu-img">
-          <div class="navbar__menu-wrapper navbar__menu-wrapper--display-none">
+          <div class="navbar__menu-wrapper display-none">
             <img src="./images/icon-close.svg" alt="close" class="navbar__menu-close-img">
             <ul class="navbar__menu-ul">
               <li class="navbar__menu-li"><a href="" class="navabr__menu-link">Collections</a></li>
@@ -61,12 +61,23 @@
             <ul class="navbar__menu-ul">
               <li class="navbar__menu-li"><a href="" class="navabr__menu-link">Contact</a></li>
             </ul>
+            <div class="navbar__menu-background display-none"></div>
           </div>
         </nav>
 
         <aside class="navbar__client-panel">
           <div class="navbar__client-panel-cart">
-            <img src="./images/icon-cart.svg" alt="cart" class="navbar__client-panel-cart-img">
+            <button class="navbar__client-panel-cart-button">
+              <img src="./images/icon-cart.svg" alt="cart" class="navbar__client-panel-cart-img">
+            </button>
+            <div class="navbar__client-panel-cart-open display-none">
+              <div class="navbar__client-panel-cart-open-title"> Cart</div>
+              <div class="navbar__client-panel-cart-open-content">
+                <div class="navbar__client-panel-cart-open-content-div ">
+                  <p class="navbar__client-panel-cart-open-content-div-p">Your cart is empty</p>
+                  </div>
+              </div>
+            </div>
           </div>
           <div class="navbar__client-panel-profile">
             <img src="./images/image-avatar.png" alt="profile" class="navbar__client-panel-profile-img">
@@ -75,70 +86,71 @@
 
       </nav>
     </header>
-  
 
-  <main class="main">
 
-    <section class="product">
+    <main class="main">
 
-      <aside class="product__preview">
-        <div class="product__preview-main-img-container">
-          <img src="./images/image-product-1.jpg" alt="product" class="product__preview-main-img">
-          <div class="product__preview-button-container">
-            <button class="product__preview-button product__preview-button--left"><img src="./images/icon-previous.svg"
-                alt="left" class="product__preview-button-img"></button>
-            <button class="product__preview-button product__preview-button--right"><img src="./images/icon-next.svg"
-                alt="right" class="product__preview-button-img"></button>
+      <section class="product">
+
+        <aside class="product__preview">
+          <div class="product__preview-main-img-container">
+            <img src="./images/image-product-1.jpg" alt="product" class="product__preview-main-img">
+            <div class="product__preview-button-container">
+              <button class="product__preview-button product__preview-button--left"><img
+                  src="./images/icon-previous.svg" alt="left" class="product__preview-button-img"></button>
+              <button class="product__preview-button product__preview-button--right"><img src="./images/icon-next.svg"
+                  alt="right" class="product__preview-button-img"></button>
+            </div>
           </div>
-        </div>
-        <div class="product__preview-images-container">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="product photo 1" class="product__preview-img">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="product photo 2" class="product__preview-img">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="product photo 3" class="product__preview-img">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="product photo 4" class="product__preview-img">
-        </div>
-      </aside>
+          <div class="product__preview-images-container">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="product photo 1" class="product__preview-img">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="product photo 2" class="product__preview-img">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="product photo 3" class="product__preview-img">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="product photo 4" class="product__preview-img">
+          </div>
+        </aside>
 
-      <aside class="product__chart">
-        <h3 class="product__chart-company-name">Sneaker company</h3>
-        <h2 class="product__chart-title">Fall Limited Edition Sneakers</h2>
-        <p class="product__chart-description">These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-        <div class="product__chart-price-container">
-          <div class="product__chart-price-actual">$125.00</div>
-          <div class="product__chart-price-discount">50%</div>
-          <div class="product__chart-price-previous">$250.00</div>
-        </div>
-        <div class="product__chart-order-container">
-          <div class="product__chart-order-quantity-container">
-            <button class="product__chart-order-button-quantity product__chart-order-button-quantity--minus">
-              <img src="./images/icon-minus.svg" alt="minus" class="product__chart-order-button-quantity-img">
+        <aside class="product__chart">
+          <h3 class="product__chart-company-name">Sneaker company</h3>
+          <h2 class="product__chart-title">Fall Limited Edition Sneakers</h2>
+          <p class="product__chart-description">These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="product__chart-price-container">
+            <div class="product__chart-price-actual">$125.00</div>
+            <div class="product__chart-price-discount">50%</div>
+            <div class="product__chart-price-previous">$250.00</div>
+          </div>
+          <div class="product__chart-order-container">
+            <div class="product__chart-order-quantity-container">
+              <button class="product__chart-order-button-quantity product__chart-order-button-quantity--minus">
+                <img src="./images/icon-minus.svg" alt="minus" class="product__chart-order-button-quantity-img">
+              </button>
+              <div class="product__chart-order-quantity">0</div>
+              <button class="product__chart-order-button-quantity product__chart-order-button-quantity--plus">
+                <img src="./images/icon-plus.svg" alt="plus" class="product__chart-order-button-quantity-img">
+              </button>
+            </div>
+            <button class="product__chart-order-button">
+              <div class="product__chart-order-text-container">
+                <img src="./images/icon-cart.svg" alt="" class="product__chart-order-button-img">
+                <p class="product__chart-order-button-text">Add to cart</p>
+              </div>
             </button>
-            <div class="product__chart-order-quantity">0</div>
-            <button class="product__chart-order-button-quantity product__chart-order-button-quantity--plus">
-              <img src="./images/icon-plus.svg" alt="plus" class="product__chart-order-button-quantity-img">
-            </button>
+
+
           </div>
-          <button class="product__chart-order-button button">
-            <div class="product__chart-order-text-container">
-            <img src="./images/icon-cart.svg" alt="" class="product__chart-order-button-img">
-            <p class="product__chart-order-button-text">Add to cart</p>
-          </div>
-          </button>
+        </aside>
 
+      </section>
 
-        </div>
-      </aside>
+    </main>
 
-    </section>
-
-  </main>
-</div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
-
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
