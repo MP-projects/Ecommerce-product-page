@@ -14,7 +14,7 @@ const hideMenu = () => {
   navbarMenuBackground.classList.add("display-none");
 };
 
-const mediaQuery = window.matchMedia("(max-width:1024px");
+const mediaQuery = window.matchMedia("(max-width:1023px");
 
 const handleMediaChange = (e) => {
   if (e.matches) {
@@ -120,14 +120,15 @@ productChartOrderButton.addEventListener("click", () => {
       navbarClientPanelCartProductQuantity = document.querySelector(
         ".navbar__client-panel-cart-product-quantity"
       );
-      navbarClientPanelCartProductQuantity.textContent = productOrderedCounter;
+      navbarClientPanelCartProductQuantity.innerHTML = `<p class = "navbar__client-panel-cart-product-quantity-p">${productOrderedCounter}</p>`;
     } else {
       const navbarClientPanelCartProductQuantity =
         document.createElement("div");
       navbarClientPanelCartProductQuantity.classList.add(
         "navbar__client-panel-cart-product-quantity"
       );
-      navbarClientPanelCartProductQuantity.textContent = productOrderedCounter;
+      navbarClientPanelCartProductQuantity.innerHTML = `<p class = "navbar__client-panel-cart-product-quantity-p">${productOrderedCounter}</p>`;
+
       navbarClientPanelCartButton.appendChild(
         navbarClientPanelCartProductQuantity
       );
