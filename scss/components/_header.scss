@@ -73,7 +73,10 @@
             font-weight: 700;
             font-size: 1.8rem;
             line-height: 2.6rem;
-            color: $color-very-dark-blue;
+        }
+
+        &-link {
+            color: $color-very-dark-blue
         }
 
         &-background {
@@ -100,9 +103,10 @@
             justify-content: space-around;
             align-items: center;
             height: 100%;
+
             &-button {
                 height: 100%;
-                flex-basis : 30%;
+                flex-basis: 30%;
                 position: relative;
             }
 
@@ -121,7 +125,7 @@
                 background-color: $color-primary;
                 border-radius: 200px;
 
-                &-p{
+                &-p {
                     font-weight: 700;
                     font-size: 1.0rem;
                     color: white;
