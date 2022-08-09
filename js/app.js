@@ -40,9 +40,13 @@ const imageContainersArray = [...imageContainers];
 const productPreviewMainImgGallery = document.querySelector(
   ".gallery-product__preview-main-img"
 );
-const imageButtonsGallery = document.querySelectorAll(".gallery-product__preview-button");
+const imageButtonsGallery = document.querySelectorAll(
+  ".gallery-product__preview-button"
+);
 const imageButtonsArrayGallery = [...imageButtonsGallery];
-const imagesGallery = document.querySelectorAll(".gallery-product__preview-img");
+const imagesGallery = document.querySelectorAll(
+  ".gallery-product__preview-img"
+);
 const imagesArrayGallery = [...imagesGallery];
 const imageContainersGallery = document.querySelectorAll(
   ".gallery-product__preview-image-container"
@@ -115,15 +119,11 @@ const mainImageHandler = () => {
   });
 };
 
-
 //gallery handler
 const gallery = document.querySelector(".gallery");
 const galleryBackgroundDesktop = document.querySelector(".gallery-background");
 const galleryClose = document.querySelector(".gallery__close-img");
 let isGalleryOpen = false;
-
-
-
 
 const galleryHandler = () => {
   if (!isGalleryOpen) {
@@ -139,7 +139,7 @@ const galleryHandler = () => {
     }
     imagesArrayGallery[imageCounter - 1].classList.add("opacity");
     imageContainersArrayGallery[imageCounter - 1].classList.add("border");
-  
+
     imagesArrayGallery.forEach((element, index) => {
       element.addEventListener("click", () => {
         for (i = 0; i <= 3; i++) {
@@ -152,10 +152,8 @@ const galleryHandler = () => {
         productPreviewMainImgGallery.src = `./images/image-product-${imageCounter}.jpg`;
       });
     });
-  };
-   
+  }
 };
-
 
 imageButtonsArrayGallery[0].addEventListener("click", (e) => {
   e.stopPropagation();
@@ -193,7 +191,7 @@ imageButtonsArrayGallery[1].addEventListener("click", (e) => {
   imageContainersArrayGallery[imageCounter - 1].classList.add("border");
 
   productPreviewMainImgGallery.src = `./images/image-product-${imageCounter}.jpg`;
-}); 
+});
 
 const galleryCloseHandler = () => {
   gallery.classList.add("display-none");
@@ -342,6 +340,31 @@ navbarClientPanelCartButton.addEventListener("click", () => {
   }
 });
 
+//desktop menu hover
+
+let menuLinks = [...document.querySelectorAll(".navbar__menu-link")];
+console.log(menuLinks);
+const menuUls = [...document.querySelectorAll(".navbar__menu-ul")];
+console.log(menuUls);
+
+const menuHover = () => {
+  menuLinks.forEach((element, index) => {
+    element.addEventListener("mouseover", () => {
+      menuUls[index].style.borderBottom = "3px solid hsl(26, 100%, 55%)";
+    });
+    element.addEventListener("mouseout", () => {
+      menuUls[index].style.borderBottom = "initial";
+    });
+  });
+};
+
+const removeMenuHover = () => {
+  menuLinks.forEach((element) => {
+    element.replaceWith(element.cloneNode(true));
+  });
+  menuLinks = [...document.querySelectorAll(".navbar__menu-link")];
+};
+
 // implementation of function depending on media query
 const mediaQueryMobile = window.matchMedia("(max-width:1023px");
 
@@ -365,6 +388,9 @@ const handleMediaChange = (e) => {
 
     //mobile gallery listener remover
     productPreviewMainImgContainer.removeEventListener("click", galleryHandler);
+
+    //dekstop menu hover remove
+    removeMenuHover();
   } else {
     //mobile menu handler
 
@@ -373,6 +399,7 @@ const handleMediaChange = (e) => {
     navbarMenuWrapper.classList.remove("display-none");
     navbarMenuCloseImg.removeEventListener("click", hideMenu);
     navbarMenuBackground.removeEventListener("click", hideMenu);
+    hideMenu();
 
     //main image desktop handler
 
@@ -381,7 +408,10 @@ const handleMediaChange = (e) => {
     //desktop gellry listener add
     productPreviewMainImgContainer.addEventListener("click", galleryHandler);
     galleryClose.addEventListener("click", galleryCloseHandler);
-    galleryCloseHandler()
+    galleryCloseHandler();
+
+    //desktop menu hover
+    menuHover();
   }
 };
 
